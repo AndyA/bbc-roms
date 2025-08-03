@@ -1,0 +1,7 @@
+[project]
+name = "roms"
+version = "0.1.0"
+description = "Work with BBC Micro ROM Images"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
