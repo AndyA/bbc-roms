@@ -74,7 +74,7 @@ roms: list[Optional[FatRom]] = [
     FatRom(
         size=4,
         roms=[
-            SidewaysRom.from_file("roms/m-uts.rom"),
+            SidewaysRom.from_file("roms/M-UTS.rom"),
             SidewaysRom.from_file("roms/DNFS.rom"),
             SidewaysRom.from_file("roms/ADFS 1.53.rom"),
             SidewaysRom.from_file("roms/BBC BASIC version 2.rom"),
@@ -86,7 +86,7 @@ for slot, fat_rom in enumerate(roms):
     if fat_rom is not None:
         print(f"{slot:>2} Fat ROM")
         for i, rom in enumerate(fat_rom.roms):
-            vslot = slot * 4 + i
+            vslot = slot + i * 4
             if rom is not None:
                 print(f"  {vslot:>2} {rom.name}")
             else:
